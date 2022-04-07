@@ -1,15 +1,24 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import "./App.css";
-import MultipleLanguage from "./components/MultipleLanguage/MultipleLanguage.tsx";
+import Heading from "./components/Heading";
 
 function App() {
   const [t, i18n] = useTranslation();
+  const selectLanguageRef = useRef();
+
+  useEffect(() => {
+    const lng = localStorage.getItem("i18nextLng");
+    selectLanguageRef.current.value = lng;
+
+    i18n.changeLanguage(lng);
+  }, [i18n]);
 
   return (
     <>
-      <MultipleLanguage />
+      <Heading ref={selectLanguageRef} />
       <div>
-        <p>{t("Thanks.1")}</p>
+        <p>{t("welcome")}</p>
       </div>
     </>
   );

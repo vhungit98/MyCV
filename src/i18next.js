@@ -17,14 +17,14 @@ i18next
   .use(Backend)
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
-  .use(LanguageDetector)
+  .use(LanguageDetector) // default localStorage.setItem("i18nextLng", "vi")
   // pass the i18n instance to react-i18next.
   .use(initReactI18next)
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     fallbackLng: "vi",
-    lng: "vi", // default language
+    // lng: "vi", // default language
     debug: false,
     whitelist: Languages,
     interpolation: {
