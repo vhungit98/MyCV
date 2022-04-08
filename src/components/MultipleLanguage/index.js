@@ -17,21 +17,15 @@ function MultipleLanguage(props, selectLanguageRef) {
   };
 
   return (
-    <div>
-      {/* <select onChange={handleChange} ref={selectLanguageRef}>
-        <option value="vi">Việt Nam</option>
-        <option value="en">English</option>
-      </select> */}
-      <Form.Select
-        className={classes}
-        size="sm"
-        ref={selectLanguageRef}
-        onChange={handleChange}
-      >
-        <option value="vi">Việt Nam</option>
-        <option value="en">English</option>
-      </Form.Select>
-    </div>
+    <Form.Select
+      className={classes}
+      size="sm"
+      ref={selectLanguageRef}
+      onChange={handleChange}
+    >
+      <option value="vi">Việt Nam</option>
+      <option value="en">English</option>
+    </Form.Select>
   );
 }
 export default forwardRef(MultipleLanguage);
