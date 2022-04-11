@@ -4,11 +4,14 @@ import App from "./App";
 import "./i18next";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider } from "./stores/context/ThemeContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Suspense fallback={<div>Loading ...</div>}>
-    <App />
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </Suspense>
 );
 

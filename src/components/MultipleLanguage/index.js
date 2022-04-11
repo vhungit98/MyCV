@@ -1,13 +1,12 @@
-import clsx from "clsx";
+// import clsx from "clsx";
 import { forwardRef } from "react";
-import { Form } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
-import styles from "./MultipleLanguage.module.scss";
+// import styles from "./MultipleLanguage.module.scss";
 
 function MultipleLanguage(props, selectLanguageRef) {
   const [, i18n] = useTranslation();
 
-  const classes = clsx(styles.selectLanguageBox);
+  // const classes = clsx(styles.selectLanguageBox);
 
   const handleChange = () => {
     const selectLanguageBox = selectLanguageRef.current;
@@ -17,15 +16,10 @@ function MultipleLanguage(props, selectLanguageRef) {
   };
 
   return (
-    <Form.Select
-      className={classes}
-      size="sm"
-      ref={selectLanguageRef}
-      onChange={handleChange}
-    >
+    <select onChange={handleChange} ref={selectLanguageRef}>
       <option value="vi">Việt Nam</option>
       <option value="en">English</option>
-    </Form.Select>
+    </select>
   );
 }
 export default forwardRef(MultipleLanguage);
