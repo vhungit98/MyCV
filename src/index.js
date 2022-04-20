@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import "./i18next";
 import "./index.css";
@@ -9,9 +10,11 @@ import { ThemeProvider } from "./stores/context/ThemeContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Suspense fallback={<div>Loading ...</div>}>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </Router>
   </Suspense>
 );
 

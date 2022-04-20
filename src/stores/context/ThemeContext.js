@@ -3,10 +3,10 @@ import { createContext, useState } from "react";
 const ThemeContext = createContext();
 
 function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("light-mode");
 
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
+    setTheme(theme === "light-mode" ? "dark-mode" : "light-mode");
   };
 
   const value = {

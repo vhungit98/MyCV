@@ -4,13 +4,14 @@ import { ThemeContext } from "../../stores/context/ThemeContext";
 export default function ToggleTheme() {
   const themeContext = useContext(ThemeContext);
 
-  const handleChange = () => {
-    console.log(themeContext);
-  };
   return (
-    <select onChange={handleChange}>
-      <option value="light">Light mode</option>
-      <option value="dark">Dark mode</option>
-    </select>
+    <button
+      style={{ width: 150 }}
+      type="button"
+      onClick={() => themeContext.toggleTheme()}
+    >
+      {themeContext.theme.charAt(0).toUpperCase() + themeContext.theme.slice(1)}{" "}
+      mode
+    </button>
   );
 }

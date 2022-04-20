@@ -1,8 +1,12 @@
 import { useContext, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Heading from "./components/Heading";
-import { SimpleMDE } from "./components/SimpleMDE";
+import Introduce from "./components/Introduce";
+import MyBlog from "./components/MyBlog";
+import MyCV from "./components/MyCV";
+import Updating from "./components/Updating";
 import { ThemeContext } from "./stores/context/ThemeContext";
 
 function App() {
@@ -20,13 +24,30 @@ function App() {
   }, [i18n]);
 
   return (
-    <div className={themeContext.theme}>
-      <Heading ref={selectLanguageRef} />
-      <div>
-        <p>{t("welcome")}</p>
+    <div style={{ paddingTop: 64 }} className={themeContext.theme}>
+      <div
+        style={{
+          borderBottom: "1px solid #e8ebed",
+          boxShadow: "0 4px 4px 0 rgb(0 0 0 / 10%)",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: "white",
+          zIndex: 999,
+        }}
+      >
+        <Heading ref={selectLanguageRef} />
       </div>
-      <div>
-        <SimpleMDE />
+      <div style={{ width: "100%", maxWidth: 1140, margin: "0 auto" }}>
+        <div style={{ paddingTop: 30 }}>
+          <Routes>
+            <Route path="/" element={<Introduce />} />
+            <Route path="/my-cv" element={<MyCV />} />
+            <Route path="/my-blog" element={<MyBlog />} />
+            <Route path="/updating" element={<Updating />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );

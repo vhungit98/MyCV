@@ -1,4 +1,8 @@
-.dark {
-  color: #fff;
-  background-color: #333;
+.dark-mode {
+  color: #fff !important;
+  background-color: #333 !important;
+}
+
+a {
+  color: inherit;
 }

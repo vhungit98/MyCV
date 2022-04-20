@@ -1,26 +1,25 @@
+import clsx from "clsx";
 import { forwardRef } from "react";
+import Logo from "../Logo";
 import MultipleLanguage from "../MultipleLanguage";
+import Navbar from "../Navbar";
 import ToggleTheme from "../ToggleTheme";
+import styles from "./Heading.module.scss";
 
 function Heading(props, selectLanguageRef) {
+  const headerClasses = clsx(styles[["d-flex"]], styles[["container"]]);
   return (
-    <header>
-      <div id="logo">logo</div>
-      <nav>
-        <ul>
-          <li>
-            <a href="https://www.google.com.vn/">Menu 1</a>
-          </li>
-          <li>
-            <a href="https://www.google.com.vn/">Menu 2</a>
-          </li>
-          <li>
-            <a href="https://www.google.com.vn/">Menu 3</a>
-          </li>
-        </ul>
-      </nav>
-      <ToggleTheme />
-      <MultipleLanguage ref={selectLanguageRef} />
+    <header style={{ padding: "10px 0" }} className={headerClasses}>
+      <Logo />
+      <Navbar />
+      <div>
+        <div style={{ display: "inline-block", margin: "0 5px" }}>
+          <MultipleLanguage ref={selectLanguageRef} />
+        </div>
+        <div style={{ display: "inline-block", margin: "0 5px" }}>
+          <ToggleTheme />
+        </div>
+      </div>
     </header>
   );
 }
