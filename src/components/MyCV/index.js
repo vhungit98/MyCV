@@ -1,5 +1,10 @@
 import React from "react";
+import { SimpleMDE } from "../SimpleMDE";
 
 export default function MyCV() {
-  return <div>MyCV</div>;
+  return (
+    <div>
+      <SimpleMDE />
+    </div>
+  );
 }

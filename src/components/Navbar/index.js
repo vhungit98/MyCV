@@ -18,18 +18,42 @@ export default function Navbar() {
         }}
       >
         <li>
-          <Link style={{ display: "block", padding: "10px 30px" }} to="/">
+          <Link
+            style={{
+              display: "block",
+              padding: "10px 30px",
+              fontWeight: "bold",
+              color: "#fff",
+              minWidth: 130,
+            }}
+            to="/"
+          >
             {t("introduce")}
           </Link>
         </li>
         <li>
-          <Link style={{ display: "block", padding: "10px 30px" }} to="/my-cv">
+          <Link
+            style={{
+              display: "block",
+              padding: "10px 30px",
+              fontWeight: "bold",
+              color: "#fff",
+              minWidth: 130,
+            }}
+            to="/my-cv"
+          >
             {t("my-cv")}
           </Link>
         </li>
         <li>
           <Link
-            style={{ display: "block", padding: "10px 30px" }}
+            style={{
+              display: "block",
+              padding: "10px 30px",
+              fontWeight: "bold",
+              color: "#fff",
+              minWidth: 130,
+            }}
             to="/my-blog"
           >
             {t("my-blog")}
@@ -37,7 +61,13 @@ export default function Navbar() {
         </li>
         <li>
           <Link
-            style={{ display: "block", padding: "10px 30px" }}
+            style={{
+              display: "block",
+              padding: "10px 30px",
+              fontWeight: "bold",
+              color: "#fff",
+              minWidth: 130,
+            }}
             to="/updating"
           >
             {t("updating")} ...

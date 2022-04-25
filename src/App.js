@@ -8,9 +8,10 @@ import MyBlog from "./components/MyBlog";
 import MyCV from "./components/MyCV";
 import Updating from "./components/Updating";
 import { ThemeContext } from "./stores/context/ThemeContext";
+import Particles, { ISourceOptions } from "react-tsparticles";
 
 function App() {
-  const [t, i18n] = useTranslation();
+  const [, i18n] = useTranslation();
   const selectLanguageRef = useRef();
 
   const themeContext = useContext(ThemeContext);
@@ -27,14 +28,15 @@ function App() {
     <div style={{ paddingTop: 64 }} className={themeContext.theme}>
       <div
         style={{
-          borderBottom: "1px solid #e8ebed",
+          borderBottom: "1px solid #2d2f30",
           boxShadow: "0 4px 4px 0 rgb(0 0 0 / 10%)",
           position: "fixed",
           top: 0,
           left: 0,
           right: 0,
-          backgroundColor: "white",
-          zIndex: 999,
+          // backgroundColor: "white",
+          zIndex: 1,
+          color: '#fff'
         }}
       >
         <Heading ref={selectLanguageRef} />

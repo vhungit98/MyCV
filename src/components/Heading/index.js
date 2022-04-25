@@ -13,12 +13,12 @@ function Heading(props, selectLanguageRef) {
       <Logo />
       <Navbar />
       <div>
-        <div style={{ display: "inline-block", margin: "0 5px" }}>
-          <MultipleLanguage ref={selectLanguageRef} />
-        </div>
-        <div style={{ display: "inline-block", margin: "0 5px" }}>
+        {/* <div style={{ display: "inline-block", margin: "0 5px" }}> */}
+        <MultipleLanguage ref={selectLanguageRef} />
+        {/* </div> */}
+        {/* <div style={{ display: "inline-block", margin: "0 5px" }}>
           <ToggleTheme />
-        </div>
+        </div> */}
       </div>
     </header>
   );

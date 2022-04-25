@@ -17,8 +17,8 @@ function MultipleLanguage(props, selectLanguageRef) {
 
   return (
     <select onChange={handleChange} ref={selectLanguageRef}>
-      <option value="vi">Việt Nam</option>
-      <option value="en">English</option>
+      <option value="vi">VI</option>
+      <option value="en">EN</option>
     </select>
   );
 }
