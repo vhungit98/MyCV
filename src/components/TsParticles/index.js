@@ -16,7 +16,6 @@ export default function TsParticles() {
   //   };
   return (
     <Particles
-      id="tsparticles"
       init={particlesInit}
       //   loaded={particlesLoaded}
       options={{
@@ -43,7 +42,7 @@ export default function TsParticles() {
               quantity: 4,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4,
             },
           },

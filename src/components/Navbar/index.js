@@ -2,6 +2,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
   const [t] = useTranslation();
@@ -17,56 +18,65 @@ export default function Navbar() {
           padding: 0,
         }}
       >
-        <li>
+        <li style={{margin: '0 20px'}}>
           <Link
+            cla
+            className={styles["hvr-underline-from-center"]}
             style={{
               display: "block",
-              padding: "10px 30px",
+              padding: "10px",
               fontWeight: "bold",
               color: "#fff",
-              minWidth: 130,
+              textDecoration: "none",
+              textAlign: "center",
             }}
             to="/"
           >
             {t("introduce")}
           </Link>
         </li>
-        <li>
+        <li style={{margin: '0 20px'}}>
           <Link
+            className={styles["hvr-underline-from-center"]}
             style={{
               display: "block",
-              padding: "10px 30px",
+              padding: "10px",
               fontWeight: "bold",
               color: "#fff",
-              minWidth: 130,
+              textDecoration: "none",
+              textAlign: "center",
             }}
             to="/my-cv"
           >
             {t("my-cv")}
           </Link>
         </li>
-        <li>
+        <li style={{margin: '0 20px'}}>
           <Link
+            className={styles["hvr-underline-from-center"]}
             style={{
               display: "block",
-              padding: "10px 30px",
+              padding: "10px",
               fontWeight: "bold",
               color: "#fff",
-              minWidth: 130,
+              textDecoration: "none",
+              textAlign: "center",
             }}
             to="/my-blog"
           >
             {t("my-blog")}
           </Link>
         </li>
-        <li>
+        <li style={{margin: '0 20px'}}>
           <Link
+            className={styles["hvr-underline-from-center"]}
             style={{
               display: "block",
-              padding: "10px 30px",
+              padding: "10px",
               fontWeight: "bold",
               color: "#fff",
-              minWidth: 130,
+              textDecoration: "none",
+              textAlign: "center",
             }}
             to="/updating"
           >

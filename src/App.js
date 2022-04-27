@@ -6,9 +6,9 @@ import Heading from "./components/Heading";
 import Introduce from "./components/Introduce";
 import MyBlog from "./components/MyBlog";
 import MyCV from "./components/MyCV";
+import TsParticles from "./components/TsParticles";
 import Updating from "./components/Updating";
 import { ThemeContext } from "./stores/context/ThemeContext";
-import Particles, { ISourceOptions } from "react-tsparticles";
 
 function App() {
   const [, i18n] = useTranslation();
@@ -26,6 +26,7 @@ function App() {
 
   return (
     <div style={{ paddingTop: 64 }} className={themeContext.theme}>
+      <TsParticles />
       <div
         style={{
           borderBottom: "1px solid #2d2f30",
@@ -36,7 +37,7 @@ function App() {
           right: 0,
           // backgroundColor: "white",
           zIndex: 1,
-          color: '#fff'
+          color: "#fff",
         }}
       >
         <Heading ref={selectLanguageRef} />

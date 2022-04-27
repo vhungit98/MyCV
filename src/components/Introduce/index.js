@@ -33,7 +33,6 @@ export default function Introduce() {
         showCursor
         cursorChar="|"
       />
-      <TsParticles />
     </div>
   );
 }
